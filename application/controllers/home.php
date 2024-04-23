@@ -22,11 +22,13 @@ class Home extends CI_Controller
 
             $this->load->view('templates/templates-user/header', $data);
             $this->load->view('buku/daftarbuku', $data);
+            $this->load->view('templates/templates-user/modal');
             $this->load->view('templates/templates-user/footer', $data);
         } else {
             $data['user'] = 'Pengunjung';
             $this->load->view('templates/templates-user/header', $data);
             $this->load->view('buku/daftarbuku', $data);
+            $this->load->view('templates/templates-user/modal');
             $this->load->view('templates/templates-user/footer', $data);
         }
     }
@@ -34,7 +36,7 @@ class Home extends CI_Controller
     public function detailBuku()
     {
         $id = $this->uri->segment(3);
-        $buku = $this->ModelBuku->joinKategoriBuku(['buku.id' => $id])->result();
+        $buku = $this->ModelBuku->joinkategoribuku(['buku.id' => $id])->result();
 
         $data['user'] = "Pengunjung";
         $data['title'] = "Detail Buku";
@@ -55,6 +57,7 @@ class Home extends CI_Controller
 
         $this->load->view('templates/templates-user/header', $data);
         $this->load->view('buku/detail-buku', $data);
+        $this->load->view('templates/templates-user/modal');
         $this->load->view('templates/templates-user/footer');
     }
 }
