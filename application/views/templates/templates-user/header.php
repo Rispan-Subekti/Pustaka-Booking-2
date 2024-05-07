@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>user/css/bootstrap.css">
     <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>datatable/datatables.css" rel="stylesheet" type="text/css">
+    <a class="nav-item nav-link" onclick="information('Waktu Pengambilan Buku 2x24 jam dari Booking!!!')" href="<?php echo base_url() . 'booking/exportToPdf/' . $this->session->userdata('id_user'); ?>">Cetak Bukti Booking</a>
 </head>
 
 <body>
