@@ -159,7 +159,7 @@ class Booking extends CI_Controller
 
         // script untuk dompdf php versi 7.1.0 keatas
         $sroot      = $_SERVER['DOCUMENT_ROOT'];
-        include $sroot . "/pustaka-booking/application/third_party/dompdf/autoload.inc.php";
+        include $sroot . "/pustaka-booking-2/application/third_party/dompdf/autoload.inc.php";
         $dompdf = new Dompdf\Dompdf();
 
         $this->load->view('booking/bukti-pdf', $data);

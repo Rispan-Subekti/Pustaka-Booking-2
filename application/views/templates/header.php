@@ -20,7 +20,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
-    <a class="nav-item nav-link" onclick="information('Waktu Pengambilan Buku 2x24 jam dari Booking!!!')" href="<?php echo base_url() . 'booking/exportToPdf/' . $this->session->userdata('id_user'); ?>">Cetak Bukti Booking</a>
 
 </head>
 
